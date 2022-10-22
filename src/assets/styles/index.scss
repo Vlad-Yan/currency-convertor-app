@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  background-color: #feef7e;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 5px 5px 15px #60156D;
+  border-radius: 30px;
+
+  @media (max-width: 580px) {
+    width: 400px;
+    margin: 50px auto;
+  }
+
+  @media (max-width: 480px) {
+    width: 300px;
+    
+  }
+
+  @media (max-width: 380px) {
+    width: 260px;
+    margin: 20px auto;
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+
+.block {
+  .input-container {
+    box-sizing: border-box;
+    border: 1px solid rgb(206, 206, 206);
+    font-size: 16px;
+    font-weight: normal;
+    padding: 20px 20px;
+    margin-top: 25px;
+    border-radius: 15px;
+    width: 100%;
+
+    @media (max-width: 380px) {
+      font-size: 12px;
+    }
+  
+  }
+
+  input {
+    border: 0;
+    font-size: 54px;
+    font-weight: bold;
+    outline: none;
+    width: 100%;
+  
+    @media (max-width: 380px) {
+      font-size: 42px;
+    }
+  }
+}
+
+.currencies {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 10px;
+  overflow: hidden;
+  
+
+  li {
+    display: inline-flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-content: center;
+    flex: 1;
+    
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &.active {
+      background-color: #515CB0;
+      transition: all 300ms linear;
+      color: #fff;
+    }
+  }
+}
+
+.swap {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 50px;
+    cursor: pointer;
+    transition: all 300ms linear;
+    transform: scaleY(1);
+
+    &.active {
+      transition: all 300ms linear;
+      transform: scaleY(-1);
+
+    }
+  }
+}
