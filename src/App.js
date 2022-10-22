@@ -17,7 +17,7 @@ const [lastupdate, setLastupdate] = useState('');
 const ratesRef = useRef({});
 
 useEffect(() => {
-  fetch('http://cdn.cur.su/api/latest.json')
+  fetch('https://cdn.cur.su/api/latest.json')
   .then((res) => res.json())
   .then((json) => {
     ratesRef.current = json.rates;
